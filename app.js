@@ -6,7 +6,7 @@ var todoController = require("./controllers/todoController");
 
 app.set("view engine", "ejs");
 
-app.use(express.static("./public"));
+app.use(express.static("./public")); //middleware
 
 todoController(app);
 
