@@ -1,6 +1,27 @@
 /** @format */
 
 const bodyParser = require("body-parser");
+var mongoose = require("mongoose");
+
+// connecting to DB
+
+mongoose.connect(
+  "mongodb+srv://adhamali1907:alahly1907@todo.hf2todi.mongodb.net/test"
+);
+
+// creating schema
+var todoSchema = new mongoose.Schema({
+  item: String,
+});
+
+// creating model
+var Todo = mongoose.model("Todo", todoSchema);
+
+// creating items in model
+var itemOne = Todo({ item: "buy a flower" }).save(function (err) {
+  if (err) throw err;
+  console.log("Succesfully Saved");
+});
 
 var data = [
   { item: "Ahly Match" },
