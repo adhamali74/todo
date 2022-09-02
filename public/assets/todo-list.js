@@ -10,11 +10,10 @@ $(document).ready(function () {
       url: "/todo",
       data: todo,
       success: function (data) {
-        //do something with the data via front-end framework
+        //do something with the data via front-end
         location.reload();
       },
     });
-
     return false;
   });
 
@@ -24,7 +23,7 @@ $(document).ready(function () {
       type: "DELETE",
       url: "/todo/" + item,
       success: function (data) {
-        //do something with the data via front-end framework
+        //do something with the data via front-end
         location.reload();
       },
     });
